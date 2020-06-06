@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/white">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/action_con"
+        android:layout_alignBaseline="@id/action_con"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/action_con"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="4dp">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:src="@drawable/ic_insert_photo"
+                android:id="@+id/add_image"
+                android:onClick="pickImage"/>
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_indctr"
+                android:text="1"
+                android:textSize="20dp"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:background="@color/colorAccent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#ccc"
+            android:id="@+id/edit_message"/>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:src="@android:drawable/ic_menu_send"
+            android:tint="@color/colorAccent"
+            android:id="@+id/send"
+            android:onClick="sendMessage"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
